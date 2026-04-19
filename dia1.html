@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Día 1 | Rutina Arantxa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <div class="actions" style="margin-bottom: 16px;">
+    <a class="btn" href="index.html">Volver al inicio</a>
+    </div>
+
+    <header class="hero">
+      <p class="eyebrow">Rutina Arantxa</p>
+      <h1>Día 1 — Pierna</h1>
+    </header>
+
+    <section class="section card">
+      <h2>Ejercicios</h2>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia1/sentadilla.gif" alt="Sentadilla">
+        </div>
+        <div class="exercise-content">
+          <h3>1. Sentadilla</h3>
+          <div class="meta">
+            <span class="pill">3-4 series</span>
+            <span class="pill">8-10 reps</span>
+            <span class="pill">Descanso 90-120 s</span>
+          </div>
+          <p>
+            Ejercicio principal del día para cuádriceps, glúteos y fuerza general de pierna.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> pies firmes, abdomen activo, espalda neutra y bajada controlada.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> piensa en empujar el suelo y mantener la rodilla siguiendo la línea del pie.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> colapsar rodillas hacia dentro o perder postura en la bajada.
+          </div>
+
+          <div class="timer-box" data-timer="sentadilla">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-sentadilla">01:30</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('sentadilla', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('sentadilla', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('sentadilla', 120)">120 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('sentadilla', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('sentadilla')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('sentadilla')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('sentadilla')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d1-sentadilla-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d1-sentadilla-reps" placeholder="Reps">
+              <input type="text" id="d1-sentadilla-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d1-sentadilla')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d1-sentadilla')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d1-sentadilla-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia1/sentadilla-bulgara.gif" alt="Sentadilla búlgara">
+        </div>
+        <div class="exercise-content">
+          <h3>2. Sentadilla búlgara</h3>
+          <div class="meta">
+            <span class="pill">3 series por pierna</span>
+            <span class="pill">10-12 reps</span>
+            <span class="pill">Descanso 60-90 s</span>
+          </div>
+          <p>
+            Trabajo unilateral para mejorar estabilidad, equilibrio y corregir asimetrías.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> controla el descenso, reparte bien el peso y mantén el torso estable.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> no hace falta mucho peso; aquí importa mucho más el control.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> impulsarte con la pierna trasera o perder equilibrio por acelerar demasiado.
+          </div>
+
+          <div class="timer-box" data-timer="bulgara">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-bulgara">01:30</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('bulgara', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('bulgara', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('bulgara', 120)">120 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('bulgara', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('bulgara')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('bulgara')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('bulgara')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d1-bulgara-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d1-bulgara-reps" placeholder="Reps">
+              <input type="text" id="d1-bulgara-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d1-bulgara')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d1-bulgara')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d1-bulgara-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia1/puente-gluteo.gif" alt="Puente de glúteo">
+        </div>
+        <div class="exercise-content">
+          <h3>3. Puente de glúteo</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">12-15 reps</span>
+            <span class="pill">Descanso 60 s</span>
+          </div>
+          <p>
+            Ejercicio de glúteo para mejorar activación y fuerza en la extensión de cadera.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> sube controlando, aprieta glúteo arriba y evita arquear la zona lumbar.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> piensa en empujar con los talones.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> hacer el gesto con la lumbar en vez de con la cadera.
+          </div>
+
+          <div class="timer-box" data-timer="puente">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-puente">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('puente', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('puente', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('puente', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('puente', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('puente')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('puente')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('puente')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d1-puente-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d1-puente-reps" placeholder="Reps">
+              <input type="text" id="d1-puente-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d1-puente')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d1-puente')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d1-puente-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia1/aductor.gif" alt="Aductor con goma">
+        </div>
+        <div class="exercise-content">
+          <h3>4. Aductor con goma</h3>
+          <div class="meta">
+            <span class="pill">2-3 series</span>
+            <span class="pill">12-20 reps</span>
+            <span class="pill">Descanso 45-60 s</span>
+          </div>
+          <p>
+            Trabajo específico para la parte interna de la pierna y control de cadera.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> movimiento controlado, sin rebotes y manteniendo tensión constante.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> aquí suele compensar más control que velocidad.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> dejar que la goma tire de vuelta sin controlar la fase excéntrica.
+          </div>
+
+          <div class="timer-box" data-timer="aductor">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-aductor">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('aductor', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('aductor', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('aductor', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('aductor', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('aductor')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('aductor')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('aductor')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d1-aductor-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d1-aductor-reps" placeholder="Reps">
+              <input type="text" id="d1-aductor-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d1-aductor')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d1-aductor')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d1-aductor-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia1/peso-muerto-rumano.gif" alt="Peso muerto rumano">
+        </div>
+        <div class="exercise-content">
+          <h3>5. Peso muerto rumano</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">8-10 reps</span>
+            <span class="pill">Descanso 90-120 s</span>
+          </div>
+          <p>
+            Ejercicio de bisagra de cadera para isquios y glúteos, muy útil para fuerza y control posterior.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> cadera hacia atrás, espalda neutra y recorrido controlado.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> no pienses en bajar mucho, piensa en estirar isquios manteniendo postura.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> redondear la espalda o hacer una especie de sentadilla en vez de bisagra.
+          </div>
+
+          <div class="timer-box" data-timer="rumano">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-rumano">02:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('rumano', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('rumano', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('rumano', 120)">120 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('rumano', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('rumano')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('rumano')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('rumano')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d1-rumano-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d1-rumano-reps" placeholder="Reps">
+              <input type="text" id="d1-rumano-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d1-rumano')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d1-rumano')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d1-rumano-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

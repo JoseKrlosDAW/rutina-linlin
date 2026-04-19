@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Día 4 | Rutina Arantxa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <div class="actions" style="margin-bottom: 16px;">
+    <a class="btn" href="index.html">Volver al inicio</a>
+    </div>
+    
+    <header class="hero">
+      <p class="eyebrow">Rutina Arantxa</p>
+      <h1>Día 4 — Full body</h1>
+    </header>
+
+    <section class="section card">
+      <h2>Ejercicios</h2>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia4/sentadilla.gif" alt="Sentadilla">
+        </div>
+        <div class="exercise-content">
+          <h3>1. Sentadilla</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">8-10 reps</span>
+            <span class="pill">Descanso 90-120 s</span>
+          </div>
+          <p>
+            Ejercicio principal de pierna para cuádriceps, glúteos y estabilidad general.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> pies firmes, abdomen activo, espalda neutra y bajada controlada.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> mantén la rodilla alineada con el pie y empuja el suelo al subir.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> colapsar rodillas hacia dentro o perder tensión en el tronco.
+          </div>
+
+          <div class="timer-box" data-timer="d4sentadilla">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d4sentadilla">01:30</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d4sentadilla', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4sentadilla', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4sentadilla', 120)">120 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4sentadilla', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d4sentadilla')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d4sentadilla')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d4sentadilla')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d4-sentadilla-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d4-sentadilla-reps" placeholder="Reps">
+              <input type="text" id="d4-sentadilla-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d4-sentadilla')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d4-sentadilla')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d4-sentadilla-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia4/peso-muerto.gif" alt="Peso muerto">
+        </div>
+        <div class="exercise-content">
+          <h3>2. Peso muerto</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">5-8 reps</span>
+            <span class="pill">Descanso 120-180 s</span>
+          </div>
+          <p>
+            Ejercicio global muy exigente para cadena posterior, agarre y fuerza general.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> espalda neutra, barra pegada al cuerpo y empuje de piernas al despegar.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> mantén tensión antes de tirar; no empieces flojo desde el suelo.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> redondear la espalda o despegar la barra alejándola del cuerpo.
+          </div>
+
+          <div class="timer-box" data-timer="d4muerto">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d4muerto">02:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d4muerto', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4muerto', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4muerto', 120)">120 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4muerto', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d4muerto')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d4muerto')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d4muerto')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d4-muerto-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d4-muerto-reps" placeholder="Reps">
+              <input type="text" id="d4-muerto-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d4-muerto')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d4-muerto')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d4-muerto-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia4/remo.gif" alt="Remo">
+        </div>
+        <div class="exercise-content">
+          <h3>3. Remo</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">8-12 reps</span>
+            <span class="pill">Descanso 90 s</span>
+          </div>
+          <p>
+            Tirón horizontal para espalda media, dorsal y control escapular.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> torso estable, pecho abierto y tirón con codos limpios.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> piensa en llevar los codos hacia atrás, no en levantar la carga a tirones.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> balancear el tronco o acortar recorrido por demasiado peso.
+          </div>
+
+          <div class="timer-box" data-timer="d4remo">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d4remo">01:30</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d4remo', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4remo', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4remo', 120)">120 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4remo', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d4remo')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d4remo')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d4remo')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d4-remo-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d4-remo-reps" placeholder="Reps">
+              <input type="text" id="d4-remo-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d4-remo')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d4-remo')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d4-remo-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia4/press-militar.gif" alt="Press militar">
+        </div>
+        <div class="exercise-content">
+          <h3>4. Press militar</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">8-10 reps</span>
+            <span class="pill">Descanso 90 s</span>
+          </div>
+          <p>
+            Press vertical para hombro, tríceps y estabilidad del tronco.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> abdomen firme, glúteos activos y trayectoria vertical controlada.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> evita arquear demasiado la zona lumbar.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> transformar el gesto en un press inclinado por falta de estabilidad.
+          </div>
+
+          <div class="timer-box" data-timer="d4militar">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d4militar">01:30</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d4militar', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4militar', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4militar', 120)">120 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4militar', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d4militar')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d4militar')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d4militar')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d4-militar-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d4-militar-reps" placeholder="Reps">
+              <input type="text" id="d4-militar-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d4-militar')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d4-militar')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d4-militar-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia4/remo-banda.gif" alt="Remo con banda">
+        </div>
+        <div class="exercise-content">
+          <h3>5. Remo con banda</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">10-15 reps</span>
+            <span class="pill">Descanso 60 s</span>
+          </div>
+          <p>
+            Variante más ligera para seguir sumando trabajo de espalda con tensión continua.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> hombros bajos, torso estable y vuelta controlada de la banda.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> aprovecha toda la tensión; no dejes que la goma te devuelva el movimiento.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> soltar demasiado rápido o perder la postura del torso.
+          </div>
+
+          <div class="timer-box" data-timer="d4banda">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d4banda">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d4banda', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4banda', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4banda', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4banda', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d4banda')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d4banda')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d4banda')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d4-banda-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d4-banda-reps" placeholder="Reps">
+              <input type="text" id="d4-banda-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d4-banda')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d4-banda')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d4-banda-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia4/biceps.gif" alt="Bíceps">
+        </div>
+        <div class="exercise-content">
+          <h3>6. Bíceps</h3>
+          <div class="meta">
+            <span class="pill">2-3 series</span>
+            <span class="pill">10-12 reps</span>
+            <span class="pill">Descanso 60 s</span>
+          </div>
+          <p>
+            Trabajo directo de bíceps para completar la sesión.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> codos estables, subida limpia y bajada controlada.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> no balancees el cuerpo para terminar repeticiones.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> adelantar hombros o usar inercias.
+          </div>
+
+          <div class="timer-box" data-timer="d4biceps">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d4biceps">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d4biceps', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4biceps', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4biceps', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4biceps', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d4biceps')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d4biceps')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d4biceps')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d4-biceps-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d4-biceps-reps" placeholder="Reps">
+              <input type="text" id="d4-biceps-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d4-biceps')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d4-biceps')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d4-biceps-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia4/triceps.gif" alt="Tríceps">
+        </div>
+        <div class="exercise-content">
+          <h3>7. Tríceps</h3>
+          <div class="meta">
+            <span class="pill">2-3 series</span>
+            <span class="pill">10-15 reps</span>
+            <span class="pill">Descanso 60 s</span>
+          </div>
+          <p>
+            Trabajo directo de tríceps para cerrar la sesión.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> codos quietos, hombros estables y recorrido controlado.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> controla bien la vuelta para no perder tensión.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> separar demasiado los codos o ayudarte con el tronco.
+          </div>
+
+          <div class="timer-box" data-timer="d4triceps">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d4triceps">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d4triceps', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4triceps', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4triceps', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d4triceps', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d4triceps')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d4triceps')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d4triceps')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d4-triceps-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d4-triceps-reps" placeholder="Reps">
+              <input type="text" id="d4-triceps-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d4-triceps')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d4-triceps')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d4-triceps-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

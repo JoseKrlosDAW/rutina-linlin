@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Día 2 | Rutina Arantxa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <div class="actions" style="margin-bottom: 16px;">
+        <a class="btn" href="index.html">Volver al inicio</a>
+    </div>
+    <header class="hero">
+      <p class="eyebrow">Rutina Arantxa</p>
+      <h1>Día 2 — Empuje</h1>
+    </header>
+
+    <section class="section card">
+      <h2>Ejercicios</h2>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia2/press-pecho-supino.gif" alt="Press pecho supino">
+        </div>
+        <div class="exercise-content">
+          <h3>1. Press pecho supino</h3>
+          <div class="meta">
+            <span class="pill">3-4 series</span>
+            <span class="pill">8-10 reps</span>
+            <span class="pill">Descanso 90-120 s</span>
+          </div>
+          <p>
+            Press principal del día para pecho, con apoyo importante de tríceps y hombro anterior.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> pies firmes, escápulas estables y recorrido controlado.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> baja con control y empuja sin perder la posición de hombros.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> abrir demasiado los codos o rebotar abajo.
+          </div>
+
+          <div class="timer-box" data-timer="d2supino">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d2supino">01:30</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d2supino', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2supino', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2supino', 120)">120 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2supino', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d2supino')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d2supino')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d2supino')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d2-supino-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d2-supino-reps" placeholder="Reps">
+              <input type="text" id="d2-supino-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d2-supino')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d2-supino')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d2-supino-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia2/press-pecho.gif" alt="Press pecho">
+        </div>
+        <div class="exercise-content">
+          <h3>2. Press pecho</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">8-12 reps</span>
+            <span class="pill">Descanso 90-120 s</span>
+          </div>
+          <p>
+            Segundo press del día para seguir acumulando trabajo de pecho con una variante complementaria.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> controla la bajada y mantén el pecho estable durante todo el recorrido.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> busca recorrido limpio y sensación muscular, no solo mover peso.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> acortar demasiado el movimiento o perder posición escapular.
+          </div>
+
+          <div class="timer-box" data-timer="d2press">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d2press">01:30</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d2press', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2press', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2press', 120)">120 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2press', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d2press')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d2press')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d2press')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d2-press-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d2-press-reps" placeholder="Reps">
+              <input type="text" id="d2-press-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d2-press')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d2-press')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d2-press-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia2/aperturas-pecho.gif" alt="Aperturas pecho">
+        </div>
+        <div class="exercise-content">
+          <h3>3. Aperturas pecho</h3>
+          <div class="meta">
+            <span class="pill">2-3 series</span>
+            <span class="pill">12-15 reps</span>
+            <span class="pill">Descanso 60-75 s</span>
+          </div>
+          <p>
+            Aislamiento para pecho, útil para trabajar el músculo con más estiramiento y control.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> ligera flexión de codos y recorrido controlado sin perder tensión.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> piensa en abrazar, no en empujar.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> convertir el movimiento en un press o bajar demasiado forzando el hombro.
+          </div>
+
+          <div class="timer-box" data-timer="d2aperturas">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d2aperturas">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d2aperturas', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2aperturas', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2aperturas', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2aperturas', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d2aperturas')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d2aperturas')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d2aperturas')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d2-aperturas-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d2-aperturas-reps" placeholder="Reps">
+              <input type="text" id="d2-aperturas-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d2-aperturas')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d2-aperturas')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d2-aperturas-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia2/elevaciones-laterales.gif" alt="Elevaciones laterales">
+        </div>
+        <div class="exercise-content">
+          <h3>4. Elevaciones laterales</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">12-15 reps</span>
+            <span class="pill">Descanso 60 s</span>
+          </div>
+          <p>
+            Trabajo específico de deltoide lateral para dar amplitud y equilibrio al hombro.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> sube con control y evita balancearte con el tronco.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> mejor menos peso y más control.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> encoger trapecios o lanzar las mancuernas.
+          </div>
+
+          <div class="timer-box" data-timer="d2laterales">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d2laterales">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d2laterales', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2laterales', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2laterales', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2laterales', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d2laterales')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d2laterales')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d2laterales')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d2-laterales-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d2-laterales-reps" placeholder="Reps">
+              <input type="text" id="d2-laterales-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d2-laterales')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d2-laterales')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d2-laterales-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia2/elevaciones-frontales.gif" alt="Elevaciones frontales">
+        </div>
+        <div class="exercise-content">
+          <h3>5. Elevaciones frontales</h3>
+          <div class="meta">
+            <span class="pill">2-3 series</span>
+            <span class="pill">10-15 reps</span>
+            <span class="pill">Descanso 60 s</span>
+          </div>
+          <p>
+            Trabajo de deltoide anterior para completar el día de empuje.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> sube controlando y evita impulso del cuerpo.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> no hace falta subir demasiado por encima de la línea del hombro.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> balancear la espalda o usar demasiado peso.
+          </div>
+
+          <div class="timer-box" data-timer="d2frontales">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d2frontales">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d2frontales', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2frontales', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2frontales', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2frontales', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d2frontales')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d2frontales')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d2frontales')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d2-frontales-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d2-frontales-reps" placeholder="Reps">
+              <input type="text" id="d2-frontales-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d2-frontales')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d2-frontales')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d2-frontales-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia2/triceps.gif" alt="Tríceps">
+        </div>
+        <div class="exercise-content">
+          <h3>6. Tríceps</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">10-15 reps</span>
+            <span class="pill">Descanso 60-75 s</span>
+          </div>
+          <p>
+            Trabajo directo de tríceps para rematar el día de empuje.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> codos estables y recorrido controlado.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> controla bien la vuelta para mantener tensión.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> mover el tronco o separar demasiado los codos.
+          </div>
+
+          <div class="timer-box" data-timer="d2triceps">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d2triceps">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d2triceps', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2triceps', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2triceps', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d2triceps', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d2triceps')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d2triceps')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d2triceps')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d2-triceps-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d2-triceps-reps" placeholder="Reps">
+              <input type="text" id="d2-triceps-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d2-triceps')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d2-triceps')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d2-triceps-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

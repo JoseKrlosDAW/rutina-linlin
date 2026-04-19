@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Día 3 | Rutina Arantxa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <div class="actions" style="margin-bottom: 16px;">
+        <a class="btn" href="index.html">Volver al inicio</a>
+    </div>
+    <header class="hero">
+      <p class="eyebrow">Rutina Arantxa</p>
+      <h1>Día 3 — Tirón</h1>
+
+    </header>
+
+    <section class="section card">
+      <h2>Ejercicios</h2>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia3/remo-mancuerna.gif" alt="Remo con mancuerna">
+        </div>
+        <div class="exercise-content">
+          <h3>1. Remo con mancuerna</h3>
+          <div class="meta">
+            <span class="pill">3 series por lado</span>
+            <span class="pill">8-12 reps</span>
+            <span class="pill">Descanso 90 s</span>
+          </div>
+          <p>
+            Muy buen ejercicio para dorsal, espalda media y control unilateral.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> espalda estable, pecho abierto y tirón con el codo hacia atrás.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> piensa en llevar el codo hacia la cadera, no solo en subir la mancuerna.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> girar el tronco o tirar con impulso de la espalda baja.
+          </div>
+
+          <div class="timer-box" data-timer="d3mancuerna">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d3mancuerna">01:30</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d3mancuerna', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3mancuerna', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3mancuerna', 120)">120 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3mancuerna', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d3mancuerna')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d3mancuerna')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d3mancuerna')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d3-mancuerna-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d3-mancuerna-reps" placeholder="Reps">
+              <input type="text" id="d3-mancuerna-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d3-mancuerna')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d3-mancuerna')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d3-mancuerna-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia3/remo-banda.gif" alt="Remo con banda">
+        </div>
+        <div class="exercise-content">
+          <h3>2. Remo con banda</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">10-15 reps</span>
+            <span class="pill">Descanso 60-75 s</span>
+          </div>
+          <p>
+            Variante más ligera y continua para seguir sumando trabajo de espalda.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> torso estable, hombros bajos y tirón controlado.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> aprovecha toda la tensión de la banda y no la dejes volver sin control.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> acortar recorrido o perder tensión al volver.
+          </div>
+
+          <div class="timer-box" data-timer="d3banda">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d3banda">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d3banda', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3banda', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3banda', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3banda', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d3banda')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d3banda')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d3banda')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d3-banda-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d3-banda-reps" placeholder="Reps">
+              <input type="text" id="d3-banda-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d3-banda')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d3-banda')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d3-banda-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia3/pajaritos.gif" alt="Pajaritos">
+        </div>
+        <div class="exercise-content">
+          <h3>3. Pajaritos</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">12-15 reps</span>
+            <span class="pill">Descanso 60 s</span>
+          </div>
+          <p>
+            Trabajo específico de deltoide posterior y parte alta de la espalda.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> movimiento controlado, hombros bajos y sin impulso del tronco.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> aquí importa mucho más la sensación muscular que el peso.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> encoger trapecios o balancearte para completar la serie.
+          </div>
+
+          <div class="timer-box" data-timer="d3pajaritos">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d3pajaritos">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d3pajaritos', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3pajaritos', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3pajaritos', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3pajaritos', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d3pajaritos')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d3pajaritos')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d3pajaritos')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d3-pajaritos-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d3-pajaritos-reps" placeholder="Reps">
+              <input type="text" id="d3-pajaritos-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d3-pajaritos')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d3-pajaritos')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d3-pajaritos-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia3/curl-biceps.gif" alt="Curl de bíceps">
+        </div>
+        <div class="exercise-content">
+          <h3>4. Curl de bíceps</h3>
+          <div class="meta">
+            <span class="pill">3 series</span>
+            <span class="pill">10-12 reps</span>
+            <span class="pill">Descanso 60-75 s</span>
+          </div>
+          <p>
+            Trabajo directo de bíceps para completar el día de tirón.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> codos relativamente fijos, subida controlada y bajada lenta.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> no balancees el cuerpo para mover más peso.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> impulsar la serie con la espalda o adelantar hombros.
+          </div>
+
+          <div class="timer-box" data-timer="d3biceps">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d3biceps">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d3biceps', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3biceps', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3biceps', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3biceps', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d3biceps')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d3biceps')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d3biceps')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d3-biceps-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d3-biceps-reps" placeholder="Reps">
+              <input type="text" id="d3-biceps-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d3-biceps')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d3-biceps')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d3-biceps-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="exercise">
+        <div class="exercise-media">
+          <img src="img/dia3/curl-martillo.gif" alt="Curl martillo">
+        </div>
+        <div class="exercise-content">
+          <h3>5. Curl martillo</h3>
+          <div class="meta">
+            <span class="pill">2-3 series</span>
+            <span class="pill">10-12 reps</span>
+            <span class="pill">Descanso 60-75 s</span>
+          </div>
+          <p>
+            Buen complemento del curl clásico, con más trabajo de braquial y braquiorradial.
+          </p>
+          <div class="note">
+            <strong>Técnica clave:</strong> agarre neutro, codos estables y recorrido limpio.
+          </div>
+          <div class="note">
+            <strong>Tip:</strong> mejor menos peso y más control que mover con inercias.
+          </div>
+          <div class="warning">
+            <strong>Error común:</strong> balancear el cuerpo o encoger hombros.
+          </div>
+
+          <div class="timer-box" data-timer="d3martillo">
+            <p class="timer-label">Temporizador de descanso</p>
+            <div class="timer-display" id="display-d3martillo">01:00</div>
+            <div class="timer-controls">
+              <button class="timer-btn" onclick="setExerciseTimer('d3martillo', 45)">45 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3martillo', 60)">60 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3martillo', 90)">90 s</button>
+              <button class="timer-btn" onclick="setExerciseTimer('d3martillo', 180)">180 s</button>
+              <button class="timer-btn primary" onclick="startExerciseTimer('d3martillo')">Iniciar</button>
+              <button class="timer-btn" onclick="pauseExerciseTimer('d3martillo')">Pausar</button>
+              <button class="timer-btn" onclick="resetExerciseTimer('d3martillo')">Reset</button>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h4>Registro</h4>
+            <div class="log-form">
+              <input type="number" id="d3-martillo-peso" placeholder="Peso (kg)" step="0.5">
+              <input type="number" id="d3-martillo-reps" placeholder="Reps">
+              <input type="text" id="d3-martillo-nota" placeholder="Nota rápida">
+            </div>
+            <div class="log-actions">
+              <button class="timer-btn primary" onclick="saveExerciseLog('d3-martillo')">Guardar</button>
+              <button class="timer-btn" onclick="clearExerciseLog('d3-martillo')">Borrar</button>
+            </div>
+            <div class="saved-log" id="d3-martillo-output">Sin registro guardado todavía.</div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
